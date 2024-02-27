@@ -51,7 +51,7 @@ const validationSchema = yup.object().shape({
 const fetchData = async (url) => {
     const res = await axios({
         method: 'GET',
-        baseURL: 'http://localhost:3000',
+        baseURL: import.meta.env.VITE_API_URL,
         url: url,
     })
     return res.data;
